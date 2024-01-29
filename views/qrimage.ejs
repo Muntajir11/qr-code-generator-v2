@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+
+    .generated-div{
+        display: flex;
+        flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         color: aliceblue;
+         font-family: cursive;
+         font-size: large;
+    }
+    .qr{
+        margin: 20px;
+        border: snow solid;
+        width: max-content;
+        height: max-content;
+        padding: 10px;
+    }
+    a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fefefe;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: #212121;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+}
+
+a:hover::before {
+  transform: scaleY(0);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: #212121;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+a:hover::after {
+  transform: scaleX(0);
+}
+
+a span {
+  position: relative;
+  z-index: 3;
+}
+
+button {
+  background-color: none;
+  text-decoration: none;
+  background-color: #212121;
+  border: none;
+}
+    
+    </style>
+    <title>Code Generated!</title>
+</head>
+<body>
+
+    <div class="generated-div">
+    <h1>QR CODE IS GENERATED! </h1>
+
+    <div  class="qr">
+    <img src="<%= imageUrl %>" alt="" srcset=""><br>
+    </div>
+    
+    <div id="main-menu">
+    <button type="submit" onclick="window.location.href='/'">
+        <a ><span>Main Menu</span></a> 
+    </button>
+
+    </div>
+</div>
+</body>
+</html>

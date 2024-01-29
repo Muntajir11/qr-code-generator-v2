@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>RapidQR Creator</title>
+</head>
+<body>
+  <div class="container">
+
+
+    <div class="heading">
+      <h1>RapidQR Creator </h1>
+      <% if (imagePath) { %>
+        <img style="height: 50px; width: 50px; margin-top: 30px;" src="<%=imagePath %>" class="icon" alt="icon">
+
+        <% } %>
+    </div>
+    
+
+    <div class="load">
+
+    <div class="banter-loader">
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+      <div class="banter-loader__box"></div>
+    </div>
+
+  </div>
+
+    <div class="form">
+    <form autocomplete="off" action="/submit" method="post">
+
+        <!-- <input type="text" name="text" class="input" id="url" placeholder="Type your text"> -->
+        <div class="box-input">
+          <div class="border">
+            <input type="text" name="text" class="input" placeholder="Write your text :)">
+          </div>
+        </div>
+        
+
+        
+        <button style="margin-top: 20px;" type="submit" class="animated-button">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text">Generate QR</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+    </form>
+  </div>
+</div>  
+
+
+<footer class="footer">
+<p>&copy;Made with ❤️ by Muntajir</p>
+</footer>
+
+<div class="social"> 
+<button id="social-button" class="Btn">
+  <svg fill="white" viewBox="0 0 512 512" height="1.2em"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+  <span class="tooltip">@MuntajirGazi</span>
+</button>
+</div>
+
+<script>
+  
+  document.getElementById('social-button').addEventListener('click', function() {
+    window.location.href = 'https://twitter.com/MuntajirGazi'; 
+  });
+</script>
+</body>
+
+</html>
