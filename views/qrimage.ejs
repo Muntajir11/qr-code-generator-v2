@@ -6,6 +6,17 @@
     <link rel="stylesheet" href="styles/main.css">
     <style>
 
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
     .generated-div{
         display: flex;
         flex-direction: column;
@@ -87,7 +98,7 @@ button {
 <body>
 
     <div class="generated-div">
-    <h1>QR CODE IS GENERATED! </h1>
+    <h1 style="font-size: 24px;">QR CODE IS GENERATED! </h1>
 
     <div  class="qr">
     <img src="<%= imageUrl %>" alt="" srcset=""><br>
