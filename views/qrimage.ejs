@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <style>
 
+
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 18px;
@@ -98,18 +99,26 @@ button {
 <body>
 
     <div class="generated-div">
-    <h1 style="font-size: 24px;">QR CODE IS GENERATED! </h1>
+      <h1 style="font-size: 24px;">QR CODE IS GENERATED! </h1>
 
-    <div  class="qr">
-    <img src="<%= imageUrl %>" alt="" srcset=""><br>
-    </div>
+      <div  class="qr">
+        <img src="<%= imageUrl %>" alt="" srcset=""><br>
+      </div>
     
-    <div id="main-menu">
-    <button type="submit" onclick="window.location.href='/'">
-        <a ><span>Main Menu</span></a> 
-    </button>
+      <div id="main-menu">
 
-    </div>
-</div>
+        <button >
+          <a href="<%= imageUrl %>" download="QR_Code.png">
+            <span> Download </span>
+          </a>
+        </button>
+        <br>
+        <br>
+        <button type="submit" onclick="window.location.href='/'">
+          <a ><span>Main Menu</span></a> 
+        </button>
+
+      </div>
+  </div>
 </body>
 </html>

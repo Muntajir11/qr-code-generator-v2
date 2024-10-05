@@ -17,27 +17,25 @@ app.get("/", (req, res) => {
 
 
 app.post("/submit", (req, res) => {
+  const url = req.body.text;
 
-    const url= req.body.text;
-
-    if (!url) {
-      
+  if (!url) {
       res.redirect("/");
-    }
-  
+      return; 
+  }
 
-    QRCode.toFile('./public/QR Code Image/QR_Code.png', url, {
+  QRCode.toFile('./public/QR Code Image/QR_Code.png', url, {}, function (err) {
+      if (err) throw err;
+      console.log('QR Code is Generated');
 
-    }, function (err) {
-      if (err) throw err
-      console.log('QR Code is Generated')
-    });
+      const imageUrl = '/QR Code Image/QR_Code.png';
 
-    console.log('URL is:',url);
-    
-    res.render('qrimage.ejs', {imageUrl});
+      res.render('qrimage.ejs', { imageUrl });
+  });
 
+  console.log('URL is:', url);
 });
+
 
 app.listen(3000, () =>
   console.log('App listening on port 3000!'),
