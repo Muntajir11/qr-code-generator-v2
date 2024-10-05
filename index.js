@@ -21,18 +21,15 @@ app.post("/submit", (req, res) => {
 
   if (!url) {
       res.redirect("/");
-      return; // Add a return to prevent further execution
+      return; 
   }
 
-  // Generate the QR code and save it to the public folder
   QRCode.toFile('./public/QR Code Image/QR_Code.png', url, {}, function (err) {
       if (err) throw err;
       console.log('QR Code is Generated');
 
-      // Update the imageUrl to point to the saved QR code
-      const imageUrl = '/QR Code Image/QR_Code.png'; // Change this line
+      const imageUrl = '/QR Code Image/QR_Code.png';
 
-      // Render the QR code image page
       res.render('qrimage.ejs', { imageUrl });
   });
 
