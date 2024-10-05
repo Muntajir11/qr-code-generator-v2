@@ -99,28 +99,26 @@ button {
 <body>
 
     <div class="generated-div">
-    <h1 style="font-size: 24px;">QR CODE IS GENERATED! </h1>
+      <h1 style="font-size: 24px;">QR CODE IS GENERATED! </h1>
 
-    <div  class="qr">
-    <img src="<%= imageUrl %>" alt="" srcset=""><br>
-    </div>
+      <div  class="qr">
+        <img src="<%= imageUrl %>" alt="" srcset=""><br>
+      </div>
     
-    <div id="main-menu">
-      
-    <a href="<%= imageUrl %>" download="QR_Code.png">
-          <button >
+      <div id="main-menu">
+
+        <button >
+          <a href="<%= imageUrl %>" download="QR_Code.png">
             <span> Download </span>
-          </button>
-    </a>
-    
-    <br>
-    <br>
+          </a>
+        </button>
+        <br>
+        <br>
+        <button type="submit" onclick="window.location.href='/'">
+          <a ><span>Main Menu</span></a> 
+        </button>
 
-    <button type="submit" onclick="window.location.href='/'">
-        <a ><span>Main Menu</span></a> 
-    </button>
-
-    </div>
-</div>
+      </div>
+  </div>
 </body>
 </html>
