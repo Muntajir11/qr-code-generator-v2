@@ -36,12 +36,13 @@
   </div>
 
     <div class="form">
-    <form autocomplete="off" action="/submit" method="post">
+    <form autocomplete="off" action="/submit" onsubmit="return validateForm()" method="post">
 
         <!-- <input type="text" name="text" class="input" id="url" placeholder="Type your text"> -->
         <div class="box-input">
           <div class="border">
-            <input type="text" name="text" class="input" placeholder="Write your text :)">
+            <input type="text" name="text" id="text-input" class="input" placeholder="Write your text :)">
+
           </div>
         </div>
         
@@ -78,7 +79,14 @@
 </div>
 
 <script>
-  
+  function validateForm() {
+    const input = document.getElementById('text-input').value;
+    if (input.trim() === '') {
+      alert('Please enter some text!');
+      return false;
+    }
+    return true;
+  }
   document.getElementById('social-button').addEventListener('click', function() {
     window.location.href = 'https://twitter.com/MuntajirGazi'; 
   });
